@@ -3,12 +3,12 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  /* height: 40vmin; */
   pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
+  .c {
     animation: App-logo-spin infinite 20s linear;
   }
 }
@@ -28,11 +28,126 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Slideshow */
+
+.slideshow {
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.slideshowSlider {
+  white-space: nowrap;
+  transition: ease 1000ms;
+}
+
+.slide {
+  display: inline-block;
+  width: 100%;
+  border-radius: 40px;
+}
+
+.heart {
+	width: 50px;
+	height: 50px;
+	z-index: 1;
+	display: block;
+  position: relative;
+  margin: 0 10px;
+	animation: heart 1s ease infinite
+}
+
+@keyframes heart {
+	90% {
+		transform: scale(.8,.8)
+	}
+	100% {
+		transform: scale(1,1)
+	}
+}
+
+.heart div {
+	background: #ff0000;
+	width: 32px;
+  height: 50px;
+	top: 10px;
+	display: block;
+	position: absolute;
+	border-radius: 50%
+	}
+
+.left {
+	left: 2px;
+	transform: rotate(330deg);
+}
+
+.right {
+	right: 2px;
+	transform: rotate(30deg);
+}
+
+.check-name{
+  display: flex;
+}
+.check-name{
+  font-size: 40px;
+  filter: drop-shadow(0 0 5px rgb(223, 61, 199));
+}
+
+.show-background{
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%,0%);
+}
+
+.avata-icon{
+  display: flex;
+  justify-content: space-around;
+}
+.avata-icon .avt-avt-div{
+  width: 120px;
+  height: 120px;
+  margin: auto;
+}
+.avata-icon .avt-avt-div img{
+  border-radius: 100%;
+  width: 100%;
+  height: 100%;
+}
+.avt-avt .name-title{
+  font-size: 24px;
+  color: #0614c9;
+}
+.text-cung{
+  background-color: #96d6ff ;
+  padding: 8px 12px;
+  color: #fff;
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+.time-background{
+  --border-width: 3px;
+  border-radius: 100%;
+  padding: 20px;
+  width: 200px;
+  height: 200px;
+  margin:  20px auto;
+  display: flex;
+  background: linear-gradient(
+    60deg,
+    hsla(314, 85%, 66%, 0.54),
+    hsl(359, 85%, 66%,0.54),
+    hsl(44, 85%, 66%,0.54),
+    hsl(89, 85%, 66%,0.54),
+    hsl(179, 85%, 66%,0.54)
+  );
+  margin-top: -80px;
+  position: relative;
+  z-index: 999;
+}
+.date-time{
+  display: inline-block;
+  font-size: 20px;
+  margin: auto;
 }
